@@ -1,27 +1,23 @@
-export const USERS  = new Object({
+export const USERS  = {
     valid: {
         username: "test",
-        password: "password123",
-        message: "User successfully logged in!"
+        password: "password123"
     },
     blockedAccount: {
-        username: "tetestblockst",
-        password: "password123",
-        message: "User blocked!"
+        username: "testblock",
+        password: "password123"
     },
-    invalidUSer: {
+    invalidUser: {
         username: "invalid",
-        password: "password123",
-        message: "User not found!"
+        password: "password123"
     },
     wrongPassword: {
         username: "test",
-        password: "wrongpass",
-        message: "Incorrect username or password!"
+        password: "wrongpass"
     }
-});
+};
 
-export const MESSAGES = new Object({
+export const MESSAGES = {
     success: {
         success: "User successfully logged in!",
         authenticated: "User test authenticated",
@@ -30,7 +26,6 @@ export const MESSAGES = new Object({
         userBlocked: "User blocked!",
         userNotFound: "User not found!",
         incorrectPassword: "Incorrect username or password!",
-        userBlocked: "User temporarily blocked!"
+        TemporarilyBlocked: "User temporarily blocked!"
     }
-  
-});
+};
