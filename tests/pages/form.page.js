@@ -1,7 +1,10 @@
+import { expect } from "@playwright/test";
+
 export class FormPage{
 
     constructor(page) {
         this.page = page;
+        this.pageHeading = page.getByRole('heading', {name: 'form'});
         this.nameInput = page.getByRole('textBox', {name: 'Name *'});
         this.emailInput = page.getByRole('textBox', {name: 'Email *'});
         this.passwordInput = page.getByRole('textBox', {name: 'Password *'});
@@ -15,6 +18,7 @@ export class FormPage{
 
     async navigateToForm() {
         await this.page.goto('/form');
+        await expect(this.pageHeading).toBeVisible();
     }
 
     async fillName(userName) {

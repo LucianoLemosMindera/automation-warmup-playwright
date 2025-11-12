@@ -6,7 +6,6 @@ test.beforeEach(async ({ page }) => {
     const form = new FormPage(page);
 
     await form.navigateToForm();
-    await expect(page.getByRole('heading', {name: 'form'})).toBeVisible();
 });
 
 for (const user of USERS){

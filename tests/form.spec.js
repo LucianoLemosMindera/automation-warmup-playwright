@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 for (const user of USERS){
-    test(user.scenario, async ({page}) => {
+    test.skip(user.scenario, async ({page}) => {
         await test.step('insert values to form fields', async () => {
             await page
                 .getByRole('textBox', {name: 'Name *'})
