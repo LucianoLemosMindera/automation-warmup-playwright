@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test";
+
 export class FormPage{
 
     constructor(page) {
@@ -16,7 +18,7 @@ export class FormPage{
 
     async navigateToForm() {
         await this.page.goto('/form');
-        await expect(pageHeading).toBeVisible();
+        await expect(this.pageHeading).toBeVisible();
     }
 
     async fillName(userName) {

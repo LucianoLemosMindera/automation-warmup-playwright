@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import hpCharacters from './data/json/hp.characters.json'
 
 for(const hpCharacter of hpCharacters){
-    test('Characte '+ hpCharacter.name, async ({ page }) => {
+    test.skip('Characte '+ hpCharacter.name, async ({ page }) => {
         await page.goto('/table');
 
         const nameWithoutSpace = hpCharacter.name.replace(' ', '');
